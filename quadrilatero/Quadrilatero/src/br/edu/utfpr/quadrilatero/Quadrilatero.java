@@ -31,17 +31,24 @@ public class Quadrilatero {
         return lado2;
     }
     
-    public double areaQuadrilatero(){
+    public double getAreaPlana(){
         return (double)lado1 * lado2;
     }
     
-    public int perimetroQuadrilatero(){
+    public int getPerimetro(){
         return (2 * lado1) + (2 * lado2);
     }
     
     public boolean isQuadrado(){
-        if(lado1 == lado2){
-            
-        }
+        return lado1 == lado2;
+    }
+
+    public boolean isRetangulo(){
+        return lado1 != lado2;
+    }
+
+    public String toString(){
+        return "Lado 1: " + lado1 + "\n\n" + "Lado 2: " + lado2;
     }
 }
+
