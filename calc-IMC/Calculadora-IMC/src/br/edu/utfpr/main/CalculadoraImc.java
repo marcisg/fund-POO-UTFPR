@@ -11,9 +11,9 @@ public class CalculadoraImc {
         Scanner scan = new Scanner(System.in);
         
         System.out.println("Insira seu peso: ");
-        float peso = scan.nextFloat();
+        double peso = scan.nextDouble();
         System.out.println("Insira sua altura: ");
-        float altura = scan.nextFloat();
+        double altura = scan.nextDouble();
         
         Imc imc = new Imc(peso,altura);
         

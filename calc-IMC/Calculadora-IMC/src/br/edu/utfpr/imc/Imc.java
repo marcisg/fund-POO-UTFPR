@@ -3,41 +3,41 @@ package br.edu.utfpr.imc;
 
 
 public class Imc {
-    private float peso;
-    private float altura;
+    private double peso;
+    private double altura;
     
     public Imc(){
     
     };
     
-    public Imc(float peso, float altura){
+    public Imc(double peso, double altura){
         this.peso = peso;
         this.altura = altura;
     }
     
-    public void setPeso (float peso){
+    public void setPeso (double peso){
         this.peso = peso;
     }
     
-    public float getPeso(){
+    public double getPeso(){
         return peso;
     }
     
-    public void setAltura(float altura){
+    public void setAltura(double altura){
         this.altura = altura;
     }
     
-    public float getAltura(){
+    public double getAltura(){
         return altura;
     }
     
-    public float getImcCalculado(){
+    public double getImcCalculado(){
         return peso/(altura * altura);
     }
     
     public String verificarEstadoImc(){
         
-        float imc = getImcCalculado();
+        double imc = getImcCalculado();
         
         if(imc >= 0 && imc <20){
             return "Magro";
