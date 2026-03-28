@@ -45,8 +45,10 @@ public class Quadrilatero {
 
     public boolean isRetangulo(){
         return lado1 != lado2;
+        //return !this.isQuadrado();
     }
 
+    @Override
     public String toString(){
         return "Lado 1: " + lado1 + "\n\n" + "Lado 2: " + lado2;
     }

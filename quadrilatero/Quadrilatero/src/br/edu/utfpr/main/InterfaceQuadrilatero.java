@@ -9,10 +9,10 @@ public class InterfaceQuadrilatero {
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
-        char repetir = 'n';
+        char repetir;
 
-        int lado1 = 0;
-        int lado2 = 0;
+        int lado1;
+        int lado2;
 
 
         do{
@@ -30,19 +30,19 @@ public class InterfaceQuadrilatero {
 
         Quadrilatero quadrilatero = new Quadrilatero(lado1, lado2);
 
-        System.out.println("===========Dados do Quadril√°tero=========\n");
+        System.out.println("===========Dados do Quadritero=========\n");
         System.out.println(quadrilatero);
         System.out.println("\n==============================\n");
         if(quadrilatero.isRetangulo()){
-            System.out.println("√â ret√¢ngulo.");
+            System.out.println("… ret‚ngulo.");
         }
         if (quadrilatero.isQuadrado()){
-            System.out.println("√â quadrado.");
+            System.out.println("… quadrado.");
         }
         System.out.println("\n==============================\n");
-        System.out.println("√Årea: " + quadrilatero.getAreaPlana());
+        System.out.println("¡rea: " + quadrilatero.getAreaPlana());
         System.out.println("\n==============================\n");
-        System.out.println("Per√≠metro: " + quadrilatero.getPerimetro());
+        System.out.println("PerÌmetro: " + quadrilatero.getPerimetro());
 
     }
 }
