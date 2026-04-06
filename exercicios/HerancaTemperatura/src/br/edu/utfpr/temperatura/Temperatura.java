@@ -12,7 +12,6 @@ public class Temperatura {
     public Temperatura(String cidade, double[] temperaturas){
        this.cidade = cidade;
        this.temperaturas = temperaturas;
-        
     }
     
     public void setTemperatura(int indice, double valor){
@@ -28,9 +27,6 @@ public class Temperatura {
         }
     }
     
-    public double[] getTemperaturas(){
-        return temperaturas;
-    }
     
     public void setCidade(String cidade){
         this.cidade = cidade;
