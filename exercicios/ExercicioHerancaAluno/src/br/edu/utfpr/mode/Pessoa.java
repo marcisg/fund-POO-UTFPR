@@ -1,6 +1,4 @@
-
 package br.edu.utfpr.mode;
-
 
 public class Pessoa {
     private String nome;
@@ -31,8 +29,8 @@ public class Pessoa {
         return idade;
     }
     
+    @Override
     public String toString(){
-        return "Nome: " + nome + "\nIdade: " + idade;
-    }
-    
+        return "\nNome: " + nome + "\nIdade: " + idade;
+    }   
 }
