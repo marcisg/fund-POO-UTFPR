@@ -1,6 +1,6 @@
 package br.edu.utfpr.boletim;
 
-public class BoletimComRecuperacao extends Aluno{
+public class BoletimComRecuperacao extends BoletimEscolar{
    private double notaRecuperacao;
 
    public BoletimComRecuperacao(){
@@ -21,20 +21,25 @@ public class BoletimComRecuperacao extends Aluno{
    }
 
    public double calcularMediaFinal() {
-       return (calcularMedia() + notaRecuperacao)/2;
+       double mediaFinal = (calcularMedia() + notaRecuperacao)/2;
+       if(mediaFinal >= 7){
+           return 7;
+       }
+       return mediaFinal;
    }
 
    public String verificarAprovacao(){
-       if(calcularMediaFinal() >= 6){
-           return "Aprovado após recuperação.";
+       String situacao;
+       if(calcularMediaFinal() >= 7){
+           situacao = "Aprovado após recuperação.";
        } else{
-           return "Reprovado após recuperação.";
+           situacao =  "Reprovado após recuperação.";
        }
+       return situacao;
    }
 
    @Override
    public String toString(){
-       return super.toString() + "\nNota da recuperação: " + notaRecuperacao + "\nMédia final: " + calcularMediaFinal() + "\nSituação: " +
-               verificarAprovacao();
+       return super.toString() + "\nNota da recuperação: " + notaRecuperacao + "\nMédia final: " + calcularMediaFinal();
    }
 }

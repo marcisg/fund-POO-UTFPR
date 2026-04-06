@@ -1,14 +1,14 @@
 package br.edu.utfpr.boletim;
 
-public class Aluno {
+public class BoletimEscolar {
    private String nome;
    private double[] notas;
 
-   public Aluno(){
+   public BoletimEscolar(){
        notas = new double[4];
    }
 
-   public Aluno(String nome, double[] notas){
+   public BoletimEscolar(String nome, double[] notas){
        this.nome = nome;
        this.notas = notas;
    }
@@ -31,8 +31,11 @@ public class Aluno {
 
    public double calcularMedia(){
        double soma = 0;
-       for (int i = 0; i < 4; i++) {
+       /*for (int i = 0; i < 4; i++) {
            soma+= notas[i];
+       }*/
+       for(double n: notas){
+           soma+= n;
        }
        return soma/4;
    }
@@ -41,7 +44,7 @@ public class Aluno {
    public String toString(){
        StringBuilder sb = new StringBuilder();
        sb.append("\nBoletim de ").append(nome).append(": ").append("\nNota 1: " ).append(notas[0]).append("\nNota 2: ").append(notas[1]).append("\nNota 3: ")
-               .append(notas[2]).append("\nNota 4: ").append(notas[3]).append("\nMédia final: ").append(calcularMedia());
+               .append(notas[2]).append("\nNota 4: ").append(notas[3]);
        return sb.toString();
    }
 }

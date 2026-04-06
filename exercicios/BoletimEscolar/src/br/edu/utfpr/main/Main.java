@@ -1,6 +1,6 @@
 package br.edu.utfpr.main;
 
-import br.edu.utfpr.boletim.Aluno;
+import br.edu.utfpr.boletim.BoletimEscolar;
 import br.edu.utfpr.boletim.BoletimComRecuperacao;
 import java.util.Scanner;
 
@@ -8,7 +8,7 @@ public class Main {
    public static void main(String[] args) {
 
        Scanner scan = new Scanner(System.in);
-       Aluno aluno = new Aluno();
+       BoletimEscolar aluno = new BoletimEscolar();
 
        System.out.println("Digite o nome do aluno: ");
        aluno.setNome(scan.nextLine());
@@ -19,7 +19,8 @@ public class Main {
        }
 
        System.out.println(aluno.toString());
-       if (aluno.calcularMedia() >= 6){
+       System.out.println("\nMédia final: " + aluno.calcularMedia());
+       if (aluno.calcularMedia() >= 7){
            System.out.println("\nAprovado sem recuperação.");
        } else {
            BoletimComRecuperacao recuperacao = new BoletimComRecuperacao();
@@ -34,6 +35,7 @@ public class Main {
            recuperacao.setNotaRecuperacao(scan.nextDouble());
            System.out.println("Boletim após recuperação: ");
            System.out.println(recuperacao.toString());
+           System.out.println("Situação: " + recuperacao.verificarAprovacao());
        }
    }
 }
